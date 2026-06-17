@@ -50,7 +50,7 @@ class DataBaseConnection:
         is_active BOOLEAN DEFAULT TRUE , 
         completed_missions INT NOT NULL  DEFAULT 0  , 
         failed_missions INT NOT NULL DEFAULT 0 ,
-        agent_rank ENUM("Junior, Senior, Commander" ) )
+        agent_rank ENUM("Junior", "Senior", "Commander") )
         """)
 
         cursor.execute("""
@@ -59,8 +59,8 @@ class DataBaseConnection:
         title VARCHAR(100) NOT NULL , 
         description TEXT NOT NULL , 
         location VARCHAR(100) NOT NULL , 
-        difficulty INT NOT NULL , 
-        importance INT NOT NULL , 
+        difficulty INT NOT NULL CHECK(difficulty BETWEEN 1 AND 10 ), 
+        importance INT NOT NULL CHECK(importance BETWEEN 1 AND 10 ), 
         status ENUM("NEW", "ASSIGNED", "IN_PROGRESS", "COMPLETED", "FAILED", "CANCELLED") DEFAULT "NEW", 
         risk_level VARCHAR(50) NOT NULL , 
         assigned_agent_id INT   
@@ -88,5 +88,10 @@ class DataBaseConnection:
         self.create_tables()
 
 
+    
+
+
 db = DataBaseConnection()
 db.setup()
+
+        
