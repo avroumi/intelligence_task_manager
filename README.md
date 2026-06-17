@@ -30,27 +30,25 @@ We will detail these later, but it is with this data that we will be able to hav
         name VARCHAR(50) NOT NULL , 
         specialty VARCHAR(100) NOT NULL , 
         is_active BOOLEAN DEFAULT TRUE , 
-        completed_missions NOT NULL DEFAULT 0 , 
-        failed_missions NOT NULL DEFAULT 0 ,
-        agent_rank ENUM("Junior", "Senior", "Commander") 
-    )
+        completed_missions INT NOT NULL  DEFAULT 0  , 
+        failed_missions INT NOT NULL DEFAULT 0 ,
+        agent_rank ENUM("Junior", "Senior", "Commander") NOT NULL  )
     """
 
     b/ The missions table deals with the logic of missions and their importance; it contains its id, its name as a title, its description, its location, as well as its difficulty and its importance which defines its risk_level and the agents assigned.
     sql_table : 
     """
-    CREATE TABLE IF NOT EXISTS missions(
+            CREATE TABLE IF NOT EXISTS missions(
         id INT PRIMARY  KEY AUTO_INCREMENT , 
         title VARCHAR(100) NOT NULL , 
         description TEXT NOT NULL , 
         location VARCHAR(100) NOT NULL , 
-        difficulty INT NOT NULL , 
-        importance INT NOT NULL , 
-        status ENUM("NEW", "ASSIGNED", "IN_PROGRESS", "COMPLETED", "FAILED", "CANCELLED") DEFAULT NEW, 
-        risk level VARCHAR(50) NOT NULL , 
-        assigned_agent_id INT NULL 
-
-    )
+        difficulty INT NOT NULL CHECK(difficulty BETWEEN 1 AND 10 ), 
+        importance INT NOT NULL CHECK(importance BETWEEN 1 AND 10 ), 
+        status ENUM("NEW", "ASSIGNED", "IN_PROGRESS", "COMPLETED", "FAILED", "CANCELLED") DEFAULT "NEW", 
+        risk_level VARCHAR(50) NOT NULL , 
+        assigned_agent_id INT   
+                       )      
     """
 
 4/ Apart from that, we have 3 files, each with its own role: `db_connections` handles the connection logic to Docker via MySQL, including opening and closing. `agentDB` handles Docker with the SQL agent and applies CRUD operations; `missionDB` does the same, but with the `missions` table. Here's their method.

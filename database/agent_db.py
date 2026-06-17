@@ -30,8 +30,8 @@ class AgentDB:
             cursor.execute(sql , values)
             new_id = cursor.lastrowid
 
-        return {"message": f"data {data} create succesfully",
-                "agentId" : new_id}
+        return  f"data {data} create succesfully"
+                
 
     def get_all_agents(self) -> list[dict]: 
         with self.db.get_cursor() as cursor :
@@ -40,14 +40,14 @@ class AgentDB:
         
     def get_agent_by_id(self, agent_id) -> dict | None : 
         with self.db.get_cursor() as cursor :
-            cursor.execute("SELECT * FROM agents WHERE id = %s LImit 1 ", (agent_id, ))
+            cursor.execute("SELECT * FROM agents WHERE id = %s LIMIT 1 ", (agent_id, ))
             return cursor.fetchone()
         
     def update_agent(self, agent_id , data : dict) -> dict :
 
          
         if data["id"] : 
-            return {"message": "You can't change id"}
+            return  "You can't change id"
         
         set_close = ", ".join([f"{key} = %s " for key in data.keys()])
         values = list(data.values()) + [agent_id]
@@ -59,15 +59,15 @@ class AgentDB:
             if success : 
                 return {"message" : " Update succesfully"}
             
-        return {"message" : "Update failed"}
+        return  "Update failed"
     
     def deactivate_agent(self, agent_id): 
         with self.db.get_cursor() as cursor : 
             agent_exist = self.get_agent_by_id(agent_id) 
             if agent_exist:
                 cursor.execute("UPDATE agents SET is_active = false WHERE id = %s ", (agent_id, ))
-                return {"message": f"Deactivate agent {agent_id} successfuly"}
-            return {"message" : "Failed to deactivate agent"}
+                return  f"Deactivate agent {agent_id} successfuly"
+            return "Failed to deactivate agent"
         
     def increment_completed(self, agent_id) -> dict :
         with self.db.get_cursor() as cursor :
@@ -75,8 +75,8 @@ class AgentDB:
             if agent_exist:
                 cursor.execute("UPDATE agents SET completed_missions = completed_missions + 1 " \
                 "WHERE id = %s", (agent_id, ))
-                return {"message": "Increment succesfully"}
-            return {"message": "Failed to increment"}
+                return  "Increment succesfully"
+            return "Failed to increment"
         
     def increment_failed(self, agent_id) -> dict :
         with self.db.get_cursor() as cursor :
@@ -84,8 +84,8 @@ class AgentDB:
             if agent_exist:
                 cursor.execute("UPDATE agents SET failed_missions = failed_missions + 1 " \
                 "WHERE id = %s", (agent_id, ))
-                return {"message": "Increment succesfully"}
-            return {"message": "Failed to increment agent"}
+                return  "Increment succesfully"
+            return  "Failed to increment agent"
         
     def get_agent_performance(self , agent_id): 
         agent = self.get_agent_by_id(agent_id)

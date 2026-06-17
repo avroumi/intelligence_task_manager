@@ -50,7 +50,7 @@ class DataBaseConnection:
         is_active BOOLEAN DEFAULT TRUE , 
         completed_missions INT NOT NULL  DEFAULT 0  , 
         failed_missions INT NOT NULL DEFAULT 0 ,
-        agent_rank ENUM("Junior", "Senior", "Commander") )
+        agent_rank ENUM("Junior", "Senior", "Commander") NOT NULL  )
         """)
 
         cursor.execute("""
@@ -91,7 +91,7 @@ class DataBaseConnection:
     
 
 
-db = DataBaseConnection()
+db = DataBaseConnection() #AFTER CREATE MAIN DELETE THIS 
 db.setup()
 
         
