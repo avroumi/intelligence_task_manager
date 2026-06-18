@@ -48,7 +48,7 @@ class MissionDB :
             return "mission not found"
         status = status.upper()
         
-        if mission["status"] == "ASSIGNED" and status !=  "IN_PROGRESS": 
+        if mission["status"] == "ASSIGNED" and status not in  ["IN_PROGRESS", "CANCELLED"]: 
             return "Status is ASSIGNED you can just to choice IN_PROGRESS"
         
         if mission["status"] == "IN_PROGRESS" and status not in ["FAILED", "COMPLETED"]: 
@@ -64,7 +64,7 @@ class MissionDB :
     def get_open_missions_by_agent(self, agent_id) -> list[dict] | None:
         with self.db.get_cursor() as cursor :
             cursor.execute("SELECT * FROM missions " \
-            " WHERE (status ='IN_PROGRESS' OR status ='ASSIGNED') AND id = %s  " ,(agent_id, ))
+            " WHERE (status ='IN_PROGRESS' OR status ='ASSIGNED') AND assigned_agent_id = %s  " ,(agent_id, ))
             return cursor.fetchall()
         
 
@@ -78,7 +78,7 @@ class MissionDB :
          with self.db.get_cursor() as cursor :
             cursor.execute("SELECT COUNT(*) FROM missions WHERE status = %s", (status, ))
             mission = cursor.fetchone()
-            return {"total_mission" : mission["COUNT(*)"]}
+            return {f"total_{status}" : mission["COUNT(*)"]}
          
 
     def count_critical_missions(self): 
@@ -99,6 +99,10 @@ class MissionDB :
             " GROUP BY status")
             return cursor.fetchall()
 
+    def count_all_mission_by_status(self):
+        with self.db.get_cursor() as cursor :
+            cursor.execute("SELECT status , COUNT(status) AS count FROM missions GROUP BY status ")
+            return cursor.fetchall()
 
 
         
