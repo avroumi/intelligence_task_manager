@@ -1,210 +1,192 @@
- 2026-06-18 11:13:18,086 |INFO | 1 change detected 
- 2026-06-18 11:13:18,597 |INFO | 1 change detected 
- 2026-06-18 11:13:18,948 |INFO | 2 changes detected 
- 2026-06-18 11:14:06,507 |INFO | 1 change detected 
- 2026-06-18 11:14:07,056 |INFO | 1 change detected 
- 2026-06-18 11:14:07,413 |INFO | 3 changes detected 
- 2026-06-18 11:15:08,067 |INFO | 1 change detected 
- 2026-06-18 11:15:08,595 |INFO | 1 change detected 
- 2026-06-18 11:15:08,947 |INFO | 2 changes detected 
- 2026-06-18 11:17:34,519 |INFO | 1 change detected 
- 2026-06-18 11:17:35,029 |INFO | 1 change detected 
- 2026-06-18 11:17:35,387 |INFO | 1 change detected 
- 2026-06-18 11:19:27,180 |INFO | 1 change detected 
- 2026-06-18 11:19:27,675 |INFO | 1 change detected 
- 2026-06-18 11:20:31,983 |INFO | 1 change detected 
- 2026-06-18 11:20:32,459 |INFO | 1 change detected 
- 2026-06-18 11:20:32,823 |INFO | 1 change detected 
- 2026-06-18 11:21:34,830 |INFO | 1 change detected 
- 2026-06-18 11:21:35,388 |INFO | 1 change detected 
- 2026-06-18 11:21:35,741 |INFO | 1 change detected 
- 2026-06-18 11:21:59,496 |INFO | 1 change detected 
- 2026-06-18 11:22:00,050 |INFO | 1 change detected 
- 2026-06-18 11:22:00,402 |INFO | 1 change detected 
- 2026-06-18 11:24:25,315 |INFO | 1 change detected 
- 2026-06-18 11:24:25,826 |INFO | 1 change detected 
- 2026-06-18 11:25:23,964 |INFO | 1 change detected 
- 2026-06-18 11:25:24,512 |INFO | 1 change detected 
- 2026-06-18 11:25:24,864 |INFO | 1 change detected 
- 2026-06-18 11:25:49,489 |INFO | 1 change detected 
- 2026-06-18 11:25:49,960 |INFO | 1 change detected 
- 2026-06-18 11:26:13,232 |INFO | 1 change detected 
- 2026-06-18 11:26:13,697 |INFO | 1 change detected 
- 2026-06-18 11:26:33,420 |INFO | 1 change detected 
- 2026-06-18 11:26:33,904 |INFO | 3 changes detected 
- 2026-06-18 11:26:34,509 |INFO | 2 changes detected 
- 2026-06-18 11:26:34,863 |INFO | 1 change detected 
- 2026-06-18 11:28:24,477 |INFO | 1 change detected 
- 2026-06-18 11:28:24,998 |INFO | 1 change detected 
- 2026-06-18 11:28:25,402 |INFO | 2 changes detected 
- 2026-06-18 11:28:25,757 |INFO | 1 change detected 
- 2026-06-18 11:28:54,654 |INFO | 1 change detected 
- 2026-06-18 11:28:55,007 |INFO | 3 changes detected 
- 2026-06-18 11:28:55,359 |INFO | 1 change detected 
- 2026-06-18 11:30:37,893 |INFO | 1 change detected 
- 2026-06-18 11:30:38,252 |INFO | 1 change detected 
- 2026-06-18 11:30:37,869 |INFO | 1 change detected 
- 2026-06-18 11:30:37,357 |INFO | 2 changes detected 
- 2026-06-18 11:31:29,621 |INFO | 1 change detected 
- 2026-06-18 11:31:29,982 |INFO | 1 change detected 
- 2026-06-18 11:31:30,344 |INFO | 2 changes detected 
- 2026-06-18 11:31:30,700 |INFO | 1 change detected 
- 2026-06-18 11:31:46,051 |INFO | 1 change detected 
- 2026-06-18 11:31:46,413 |INFO | 1 change detected 
- 2026-06-18 11:31:46,917 |INFO | 2 changes detected 
- 2026-06-18 11:31:48,448 |INFO | 1 change detected 
- 2026-06-18 11:31:48,804 |INFO | 1 change detected 
- 2026-06-18 11:31:49,367 |INFO | 2 changes detected 
- 2026-06-18 11:31:49,722 |INFO | 1 change detected 
- 2026-06-18 11:32:13,803 |INFO | 1 change detected 
- 2026-06-18 11:32:14,160 |INFO | 1 change detected 
- 2026-06-18 11:32:14,512 |INFO | 3 changes detected 
- 2026-06-18 11:43:46,027 |INFO | 1 change detected 
- 2026-06-18 11:43:46,530 |INFO | 1 change detected 
- 2026-06-18 11:43:47,235 |INFO | 2 changes detected 
- 2026-06-18 11:43:47,589 |INFO | 1 change detected 
- 2026-06-18 11:44:28,621 |INFO | 1 change detected 
- 2026-06-18 11:44:29,178 |INFO | 1 change detected 
- 2026-06-18 11:44:29,530 |INFO | 1 change detected 
- 2026-06-18 11:45:15,474 |INFO | 1 change detected 
- 2026-06-18 11:45:15,828 |INFO | 1 change detected 
- 2026-06-18 11:45:16,380 |INFO | 2 changes detected 
- 2026-06-18 11:45:16,735 |INFO | 1 change detected 
- 2026-06-18 11:48:37,936 |INFO | 1 change detected 
- 2026-06-18 11:48:38,464 |INFO | 1 change detected 
- 2026-06-18 11:48:38,815 |INFO | 1 change detected 
- 2026-06-18 11:49:05,306 |INFO | 1 change detected 
- 2026-06-18 11:49:05,668 |INFO | 1 change detected 
- 2026-06-18 11:49:06,025 |INFO | 2 changes detected 
- 2026-06-18 11:49:06,380 |INFO | 1 change detected 
- 2026-06-18 11:50:34,195 |INFO | 1 change detected 
- 2026-06-18 11:50:34,551 |INFO | 1 change detected 
- 2026-06-18 11:50:35,112 |INFO | 2 changes detected 
- 2026-06-18 11:50:35,465 |INFO | 1 change detected 
- 2026-06-18 11:51:04,600 |INFO | 1 change detected 
- 2026-06-18 11:51:05,108 |INFO | 1 change detected 
- 2026-06-18 11:51:05,466 |INFO | 1 change detected 
- 2026-06-18 11:55:56,227 |INFO | 1 change detected 
- 2026-06-18 11:55:56,584 |INFO | 1 change detected 
- 2026-06-18 11:56:58,032 |INFO | 1 change detected 
- 2026-06-18 11:56:58,386 |INFO | 1 change detected 
- 2026-06-18 11:56:58,739 |INFO | 2 changes detected 
- 2026-06-18 11:56:59,092 |INFO | 2 changes detected 
- 2026-06-18 11:56:59,445 |INFO | 1 change detected 
- 2026-06-18 11:57:19,613 |INFO | 1 change detected 
- 2026-06-18 11:57:20,134 |INFO | 1 change detected 
- 2026-06-18 11:57:20,494 |INFO | 3 changes detected 
- 2026-06-18 12:01:08,896 |INFO | 1 change detected 
- 2026-06-18 12:01:09,434 |INFO | 1 change detected 
- 2026-06-18 12:01:09,788 |INFO | 1 change detected 
- 2026-06-18 12:02:43,660 |INFO | 1 change detected 
- 2026-06-18 12:02:44,014 |INFO | 1 change detected 
- 2026-06-18 12:02:44,367 |INFO | 3 changes detected 
- 2026-06-18 12:06:52,805 |INFO | 1 change detected 
- 2026-06-18 12:06:53,159 |INFO | 1 change detected 
- 2026-06-18 12:06:53,510 |INFO | 1 change detected 
- 2026-06-18 12:07:20,274 |INFO | 1 change detected 
- 2026-06-18 12:07:20,632 |INFO | 1 change detected 
- 2026-06-18 12:08:07,050 |INFO | 1 change detected 
- 2026-06-18 12:08:07,403 |INFO | 1 change detected 
- 2026-06-18 12:08:44,815 |INFO | 1 change detected 
- 2026-06-18 12:08:45,170 |INFO | 1 change detected 
- 2026-06-18 12:08:45,525 |INFO | 1 change detected 
- 2026-06-18 12:09:57,157 |INFO | 1 change detected 
- 2026-06-18 12:09:57,514 |INFO | 1 change detected 
- 2026-06-18 12:10:21,863 |INFO | 1 change detected 
- 2026-06-18 12:10:22,220 |INFO | 1 change detected 
- 2026-06-18 12:10:22,580 |INFO | 1 change detected 
- 2026-06-18 12:10:22,943 |INFO | 2 changes detected 
- 2026-06-18 12:11:15,056 |INFO | 1 change detected 
- 2026-06-18 12:11:15,613 |INFO | 1 change detected 
- 2026-06-18 12:11:15,965 |INFO | 2 changes detected 
- 2026-06-18 12:11:41,731 |INFO | 1 change detected 
- 2026-06-18 12:11:42,216 |INFO | 1 change detected 
- 2026-06-18 12:11:42,568 |INFO | 1 change detected 
- 2026-06-18 12:11:42,920 |INFO | 2 changes detected 
- 2026-06-18 12:11:55,704 |INFO | 1 change detected 
- 2026-06-18 12:11:56,251 |INFO | 1 change detected 
- 2026-06-18 12:11:56,602 |INFO | 3 changes detected 
- 2026-06-18 12:14:14,917 |INFO | 1 change detected 
- 2026-06-18 12:14:15,452 |INFO | 1 change detected 
- 2026-06-18 12:14:15,803 |INFO | 3 changes detected 
- 2026-06-18 12:15:13,034 |INFO | 1 change detected 
- 2026-06-18 12:15:13,585 |INFO | 1 change detected 
- 2026-06-18 12:15:13,938 |INFO | 2 changes detected 
- 2026-06-18 12:16:44,404 |INFO | 1 change detected 
- 2026-06-18 12:16:44,882 |INFO | 1 change detected 
- 2026-06-18 12:16:45,334 |INFO | 2 changes detected 
- 2026-06-18 12:16:44,939 |INFO | 1 change detected 
- 2026-06-18 12:17:02,116 |INFO | 1 change detected 
- 2026-06-18 12:17:02,648 |INFO | 1 change detected 
- 2026-06-18 12:17:03,354 |INFO | 2 changes detected 
- 2026-06-18 12:17:03,714 |INFO | 1 change detected 
- 2026-06-18 12:18:09,830 |INFO | 1 change detected 
- 2026-06-18 12:18:10,372 |INFO | 1 change detected 
- 2026-06-18 12:18:10,723 |INFO | 1 change detected 
- 2026-06-18 12:18:11,078 |INFO | 2 changes detected 
- 2026-06-18 12:18:11,433 |INFO | 1 change detected 
- 2026-06-18 12:19:14,628 |INFO | 1 change detected 
- 2026-06-18 12:19:15,095 |INFO | 1 change detected 
- 2026-06-18 12:19:15,459 |INFO | 3 changes detected 
- 2026-06-18 12:21:17,383 |INFO | 1 change detected 
- 2026-06-18 12:21:17,909 |INFO | 1 change detected 
- 2026-06-18 12:21:18,312 |INFO | 2 changes detected 
- 2026-06-18 12:21:18,669 |INFO | 1 change detected 
- 2026-06-18 12:21:25,240 |INFO | 1 change detected 
- 2026-06-18 12:21:25,738 |INFO | 1 change detected 
- 2026-06-18 12:21:26,192 |INFO | 2 changes detected 
- 2026-06-18 12:21:26,551 |INFO | 1 change detected 
- 2026-06-18 12:23:41,130 |INFO | 1 change detected 
- 2026-06-18 12:23:41,600 |INFO | 1 change detected 
- 2026-06-18 12:24:16,646 |INFO | 1 change detected 
- 2026-06-18 12:24:16,999 |INFO | 1 change detected 
- 2026-06-18 12:24:17,354 |INFO | 2 changes detected 
- 2026-06-18 12:24:15,948 |INFO | 1 change detected 
- 2026-06-18 12:27:38,103 |INFO | 1 change detected 
- 2026-06-18 12:27:38,664 |INFO | 1 change detected 
- 2026-06-18 12:27:39,016 |INFO | 2 changes detected 
- 2026-06-18 12:27:39,368 |INFO | 1 change detected 
- 2026-06-18 12:28:06,411 |INFO | 1 change detected 
- 2026-06-18 12:28:06,921 |INFO | 1 change detected 
- 2026-06-18 12:28:07,272 |INFO | 2 changes detected 
- 2026-06-18 12:28:07,624 |INFO | 1 change detected 
- 2026-06-18 12:28:45,238 |INFO | 1 change detected 
- 2026-06-18 12:28:45,732 |INFO | 1 change detected 
- 2026-06-18 12:28:46,091 |INFO | 2 changes detected 
- 2026-06-18 12:28:46,445 |INFO | 1 change detected 
- 2026-06-18 12:29:18,002 |INFO | 1 change detected 
- 2026-06-18 12:29:18,549 |INFO | 1 change detected 
- 2026-06-18 12:29:18,901 |INFO | 1 change detected 
- 2026-06-18 12:30:04,281 |INFO | 1 change detected 
- 2026-06-18 12:30:04,636 |INFO | 1 change detected 
- 2026-06-18 12:30:29,283 |INFO | 1 change detected 
- 2026-06-18 12:30:29,643 |INFO | 1 change detected 
- 2026-06-18 12:30:30,206 |INFO | 2 changes detected 
- 2026-06-18 12:30:30,563 |INFO | 1 change detected 
- 2026-06-18 12:34:56,211 |INFO | 1 change detected 
- 2026-06-18 12:34:56,770 |INFO | 1 change detected 
- 2026-06-18 12:34:57,121 |INFO | 2 changes detected 
- 2026-06-18 12:34:57,483 |INFO | 1 change detected 
- 2026-06-18 12:36:16,057 |INFO | 1 change detected 
- 2026-06-18 12:36:16,642 |INFO | 3 changes detected 
- 2026-06-18 12:39:33,183 |INFO | 1 change detected 
- 2026-06-18 12:39:33,679 |INFO | 1 change detected 
- 2026-06-18 12:39:34,439 |INFO | 2 changes detected 
- 2026-06-18 12:39:34,796 |INFO | 1 change detected 
- 2026-06-18 12:39:47,447 |INFO | 1 change detected 
- 2026-06-18 12:39:47,914 |INFO | 1 change detected 
- 2026-06-18 12:39:48,328 |INFO | 2 changes detected 
- 2026-06-18 12:39:48,682 |INFO | 1 change detected 
- 2026-06-18 12:41:01,142 |INFO | 1 change detected 
- 2026-06-18 12:41:01,633 |INFO | 1 change detected 
- 2026-06-18 12:41:02,035 |INFO | 2 changes detected 
- 2026-06-18 12:41:02,389 |INFO | 1 change detected 
- 2026-06-18 12:42:02,787 |INFO | 1 change detected 
- 2026-06-18 12:42:03,280 |INFO | 1 change detected 
- 2026-06-18 12:42:03,632 |INFO | 1 change detected 
- 2026-06-18 12:42:03,987 |INFO | 2 changes detected 
- 2026-06-18 12:42:11,623 |INFO | 1 change detected 
- 2026-06-18 12:42:12,193 |INFO | 1 change detected 
- 2026-06-18 12:42:12,552 |INFO | 3 changes detected 
+ 2026-06-18 15:38:48,481 |INFO | 1 change detected 
+ 2026-06-18 15:39:02,226 |INFO | START | GET |/agents  
+ 2026-06-18 15:39:02,282 |INFO | END | GET | /agents | status=200  
+ 2026-06-18 15:39:02,321 |INFO | 1 change detected 
+ 2026-06-18 15:39:16,540 |INFO | START | GET |/agents  
+ 2026-06-18 15:39:16,605 |INFO | END | GET | /agents | status=200  
+ 2026-06-18 15:39:29,472 |INFO | START | POST |/agents  
+ 2026-06-18 15:39:29,474 |INFO | Create new_agent : data name='string' specialty='string' is_active=True completed_missions=0 failed_missions=0 agent_rank='Junior' 
+ 2026-06-18 15:39:29,568 |INFO | Agent create succesfully : data {'name': 'string', 'specialty': 'string', 'is_active': True, 'completed_missions': 0, 'failed_missions': 0, 'agent_rank': 'Junior'} create succesfully 
+ 2026-06-18 15:39:29,570 |INFO | END | POST | /agents | status=201  
+ 2026-06-18 15:39:56,522 |INFO | START | PUT |/agents/8  
+ 2026-06-18 15:39:56,523 |INFO | Update the agent 8 
+ 2026-06-18 15:39:56,638 |ERROR | Update failed 
+ 2026-06-18 15:39:56,639 |INFO | END | PUT | /agents/8 | status=400  
+ 2026-06-18 15:40:19,952 |INFO | START | PUT |/agents/8  
+ 2026-06-18 15:40:19,953 |INFO | Update the agent 8 
+ 2026-06-18 15:40:20,134 |INFO | Agent update succesfully id : 8 , rowcont : True 
+ 2026-06-18 15:40:20,135 |INFO | END | PUT | /agents/8 | status=200  
+ 2026-06-18 15:40:37,607 |INFO | START | GET |/agents/10  
+ 2026-06-18 15:40:37,608 |INFO | Try to find agent by id : 10 
+ 2026-06-18 15:40:37,665 |ERROR | Agent id 10 not found 
+ 2026-06-18 15:40:37,666 |INFO | END | GET | /agents/10 | status=404  
+ 2026-06-18 15:40:42,759 |INFO | START | GET |/agents/1  
+ 2026-06-18 15:40:42,760 |INFO | Try to find agent by id : 1 
+ 2026-06-18 15:40:42,813 |INFO | END | GET | /agents/1 | status=200  
+ 2026-06-18 15:41:18,457 |INFO | START | PUT |/agents/6/deactivate  
+ 2026-06-18 15:41:18,459 |INFO | Deactivate agent 6 
+ 2026-06-18 15:41:18,576 |INFO | Deactivate succesfully : Deactivate agent 6 successfuly 
+ 2026-06-18 15:41:18,577 |INFO | END | PUT | /agents/6/deactivate | status=200  
+ 2026-06-18 15:41:50,814 |INFO | START | PUT |/agents/1100/deactivate  
+ 2026-06-18 15:41:50,815 |INFO | Deactivate agent 1100 
+ 2026-06-18 15:41:50,875 |ERROR | Agent 1100 not fond  
+ 2026-06-18 15:41:50,876 |INFO | END | PUT | /agents/1100/deactivate | status=404  
+ 2026-06-18 15:41:58,021 |INFO | START | GET |/agents/1/performance  
+ 2026-06-18 15:41:58,022 |INFO | Try to get performance agent 1 
+ 2026-06-18 15:41:58,081 |INFO | Performance catch succeuflly  
+ 2026-06-18 15:41:58,082 |INFO | END | GET | /agents/1/performance | status=200  
+ 2026-06-18 15:42:08,505 |INFO | START | GET |/agents/100/performance  
+ 2026-06-18 15:42:08,506 |INFO | Try to get performance agent 100 
+ 2026-06-18 15:42:08,563 |ERROR | Agent 100 not found  
+ 2026-06-18 15:42:08,564 |INFO | END | GET | /agents/100/performance | status=404  
+ 2026-06-18 15:44:24,294 |INFO | START | GET |/docs  
+ 2026-06-18 15:44:24,297 |INFO | END | GET | /docs | status=200  
+ 2026-06-18 15:44:24,456 |INFO | START | GET |/openapi.json  
+ 2026-06-18 15:44:24,504 |INFO | END | GET | /openapi.json | status=200  
+ 2026-06-18 15:45:30,030 |INFO | START | GET |/reports/summary  
+ 2026-06-18 15:45:30,034 |INFO | Start to catch all reports 
+ 2026-06-18 15:45:30,371 |INFO | END | GET | /reports/summary | status=200  
+ 2026-06-18 15:45:44,487 |INFO | START | GET |/reports/missions-by-status  
+ 2026-06-18 15:45:44,488 |INFO | start to get all missions by status 
+ 2026-06-18 15:45:44,547 |INFO | END | GET | /reports/missions-by-status | status=200  
+ 2026-06-18 15:45:54,866 |INFO | START | GET |/reports/top-agent  
+ 2026-06-18 15:45:54,868 |INFO | Start to get the top agent  
+ 2026-06-18 15:45:54,923 |INFO | END | GET | /reports/top-agent | status=200  
+ 2026-06-18 16:01:54,989 |INFO | START | GET |/missions  
+ 2026-06-18 16:01:55,056 |INFO | END | GET | /missions | status=200  
+ 2026-06-18 16:02:08,245 |INFO | START | POST |/missions  
+ 2026-06-18 16:02:08,247 |INFO | Calculed risk_level from data 
+ 2026-06-18 16:02:08,248 |INFO | risk is 3  
+ 2026-06-18 16:02:08,248 |INFO | Create mission with risk , data : {'title': 'string', 'description': 'string', 'location': 'string', 'difficulty': 1, 'importance': 1, 'risk_level': 'LOW'} 
+ 2026-06-18 16:02:08,331 |INFO | Mission create succesfully , {'message': "data {'title': 'string', 'description': 'string', 'location': 'string', 'difficulty': 1, 'importance': 1, 'risk_level': 'LOW'} create succesfully", 'MissionId': 8} 
+ 2026-06-18 16:02:08,333 |INFO | END | POST | /missions | status=201  
+ 2026-06-18 16:02:18,221 |INFO | START | POST |/missions  
+ 2026-06-18 16:02:18,222 |INFO | END | POST | /missions | status=422  
+ 2026-06-18 16:03:14,540 |INFO | START | POST |/missions  
+ 2026-06-18 16:03:14,542 |INFO | END | POST | /missions | status=422  
+ 2026-06-18 16:03:24,800 |INFO | START | POST |/missions  
+ 2026-06-18 16:03:24,802 |INFO | END | POST | /missions | status=422  
+ 2026-06-18 16:04:07,918 |INFO | START | GET |/missions/100  
+ 2026-06-18 16:04:07,988 |ERROR | Mission Id : 100 not found 
+ 2026-06-18 16:04:07,989 |INFO | END | GET | /missions/100 | status=404  
+ 2026-06-18 16:04:45,723 |INFO | START | PUT |/missions/100/assign/1  
+ 2026-06-18 16:04:45,725 |INFO | Try to assign mission , mission id 100 | agent_id 1 
+ 2026-06-18 16:04:45,850 |ERROR | mission id 100 not found 
+ 2026-06-18 16:04:45,851 |INFO | END | PUT | /missions/100/assign/1 | status=404  
+ 2026-06-18 16:04:51,525 |INFO | START | PUT |/missions/1/assign/1100  
+ 2026-06-18 16:04:51,527 |INFO | Try to assign mission , mission id 1 | agent_id 1100 
+ 2026-06-18 16:04:51,653 |ERROR | agent id 1100 not found 
+ 2026-06-18 16:04:51,655 |INFO | END | PUT | /missions/1/assign/1100 | status=404  
+ 2026-06-18 16:05:07,697 |INFO | START | PUT |/missions/1/assign/2  
+ 2026-06-18 16:05:07,698 |INFO | Try to assign mission , mission id 1 | agent_id 2 
+ 2026-06-18 16:05:07,824 |ERROR | Mission is not new 
+ 2026-06-18 16:05:07,825 |INFO | END | PUT | /missions/1/assign/2 | status=400  
+ 2026-06-18 16:05:27,869 |INFO | START | PUT |/missions/5/assign/2  
+ 2026-06-18 16:05:27,870 |INFO | Try to assign mission , mission id 5 | agent_id 2 
+ 2026-06-18 16:05:27,982 |INFO | Verifie if agent 2 don't have more > 3 missions 
+ 2026-06-18 16:05:28,102 |INFO | agent 2 assigned mission 5 succesfuly 
+ 2026-06-18 16:05:28,103 |INFO | END | PUT | /missions/5/assign/2 | status=200  
+ 2026-06-18 16:05:35,677 |INFO | START | PUT |/missions/5/assign/1  
+ 2026-06-18 16:05:35,678 |INFO | Try to assign mission , mission id 5 | agent_id 1 
+ 2026-06-18 16:05:35,793 |ERROR | Mission is not new 
+ 2026-06-18 16:05:35,794 |INFO | END | PUT | /missions/5/assign/1 | status=400  
+ 2026-06-18 16:05:41,604 |INFO | START | PUT |/missions/6/assign/1  
+ 2026-06-18 16:05:41,605 |INFO | Try to assign mission , mission id 6 | agent_id 1 
+ 2026-06-18 16:05:41,719 |ERROR | Mission is not new 
+ 2026-06-18 16:05:41,721 |INFO | END | PUT | /missions/6/assign/1 | status=400  
+ 2026-06-18 16:05:46,655 |INFO | START | PUT |/missions/6/assign/2  
+ 2026-06-18 16:05:46,656 |INFO | Try to assign mission , mission id 6 | agent_id 2 
+ 2026-06-18 16:05:46,782 |ERROR | Mission is not new 
+ 2026-06-18 16:05:46,783 |INFO | END | PUT | /missions/6/assign/2 | status=400  
+ 2026-06-18 16:05:53,628 |INFO | START | PUT |/missions/8/assign/1  
+ 2026-06-18 16:05:53,629 |INFO | Try to assign mission , mission id 8 | agent_id 1 
+ 2026-06-18 16:05:53,741 |ERROR | agent 1 is inactive 
+ 2026-06-18 16:05:53,742 |INFO | END | PUT | /missions/8/assign/1 | status=400  
+ 2026-06-18 16:06:05,478 |INFO | START | PUT |/missions/8/assign/2  
+ 2026-06-18 16:06:05,479 |INFO | Try to assign mission , mission id 8 | agent_id 2 
+ 2026-06-18 16:06:05,593 |INFO | Verifie if agent 2 don't have more > 3 missions 
+ 2026-06-18 16:06:05,711 |INFO | agent 2 assigned mission 8 succesfuly 
+ 2026-06-18 16:06:05,713 |INFO | END | PUT | /missions/8/assign/2 | status=200  
+ 2026-06-18 16:06:09,856 |INFO | START | PUT |/missions/9/assign/2  
+ 2026-06-18 16:06:09,857 |INFO | Try to assign mission , mission id 9 | agent_id 2 
+ 2026-06-18 16:06:09,982 |ERROR | mission id 9 not found 
+ 2026-06-18 16:06:09,984 |INFO | END | PUT | /missions/9/assign/2 | status=404  
+ 2026-06-18 16:06:14,150 |INFO | START | PUT |/missions/7/assign/2  
+ 2026-06-18 16:06:14,151 |INFO | Try to assign mission , mission id 7 | agent_id 2 
+ 2026-06-18 16:06:14,265 |ERROR | Mission is not new 
+ 2026-06-18 16:06:14,266 |INFO | END | PUT | /missions/7/assign/2 | status=400  
+ 2026-06-18 16:06:20,266 |INFO | START | PUT |/missions/4/assign/2  
+ 2026-06-18 16:06:20,267 |INFO | Try to assign mission , mission id 4 | agent_id 2 
+ 2026-06-18 16:06:20,378 |INFO | Verifie if agent 2 don't have more > 3 missions 
+ 2026-06-18 16:06:20,433 |ERROR | Agent 2 has 3 
+ 2026-06-18 16:06:20,434 |INFO | END | PUT | /missions/4/assign/2 | status=400  
+ 2026-06-18 16:06:43,777 |INFO | START | POST |/missions  
+ 2026-06-18 16:06:43,778 |INFO | Calculed risk_level from data 
+ 2026-06-18 16:06:43,778 |INFO | risk is 30  
+ 2026-06-18 16:06:43,779 |INFO | Create mission with risk , data : {'title': 'string', 'description': 'string', 'location': 'string', 'difficulty': 10, 'importance': 10, 'risk_level': 'CRITICAL'} 
+ 2026-06-18 16:06:43,856 |INFO | Mission create succesfully , {'message': "data {'title': 'string', 'description': 'string', 'location': 'string', 'difficulty': 10, 'importance': 10, 'risk_level': 'CRITICAL'} create succesfully", 'MissionId': 9} 
+ 2026-06-18 16:06:43,857 |INFO | END | POST | /missions | status=201  
+ 2026-06-18 16:06:53,475 |INFO | START | PUT |/missions/8/assign/2  
+ 2026-06-18 16:06:53,476 |INFO | Try to assign mission , mission id 8 | agent_id 2 
+ 2026-06-18 16:06:53,593 |ERROR | Mission is not new 
+ 2026-06-18 16:06:53,594 |INFO | END | PUT | /missions/8/assign/2 | status=400  
+ 2026-06-18 16:06:59,041 |INFO | START | PUT |/missions/9/assign/2  
+ 2026-06-18 16:06:59,043 |INFO | Try to assign mission , mission id 9 | agent_id 2 
+ 2026-06-18 16:06:59,157 |ERROR | Mission CRITICAL and agent 2 not Commander 
+ 2026-06-18 16:06:59,158 |INFO | END | PUT | /missions/9/assign/2 | status=400  
+ 2026-06-18 16:07:32,741 |INFO | START | POST |/agents  
+ 2026-06-18 16:07:32,743 |INFO | Create new_agent : data name='string' specialty='string' is_active=True completed_missions=0 failed_missions=0 agent_rank='Commander' 
+ 2026-06-18 16:07:32,814 |INFO | Agent create succesfully : data {'name': 'string', 'specialty': 'string', 'is_active': True, 'completed_missions': 0, 'failed_missions': 0, 'agent_rank': 'Commander'} create succesfully 
+ 2026-06-18 16:07:32,815 |INFO | END | POST | /agents | status=201  
+ 2026-06-18 16:07:53,685 |INFO | START | GET |/agents  
+ 2026-06-18 16:07:53,756 |INFO | END | GET | /agents | status=200  
+ 2026-06-18 16:08:09,218 |INFO | START | PUT |/missions/9/assign/9  
+ 2026-06-18 16:08:09,219 |INFO | Try to assign mission , mission id 9 | agent_id 9 
+ 2026-06-18 16:08:09,331 |INFO | Verifie if agent 9 don't have more > 3 missions 
+ 2026-06-18 16:08:09,447 |INFO | agent 9 assigned mission 9 succesfuly 
+ 2026-06-18 16:08:09,448 |INFO | END | PUT | /missions/9/assign/9 | status=200  
+ 2026-06-18 16:08:32,187 |INFO | START | PUT |/missions/100/start  
+ 2026-06-18 16:08:32,188 |INFO | status = IN_PROGRESS 
+ 2026-06-18 16:08:32,254 |ERROR | Not found mission 100 
+ 2026-06-18 16:08:32,255 |INFO | END | PUT | /missions/100/start | status=404  
+ 2026-06-18 16:08:46,006 |INFO | START | PUT |/missions/8/start  
+ 2026-06-18 16:08:46,007 |INFO | status = IN_PROGRESS 
+ 2026-06-18 16:08:46,137 |INFO | END | PUT | /missions/8/start | status=200  
+ 2026-06-18 16:08:50,989 |INFO | START | PUT |/missions/2/start  
+ 2026-06-18 16:08:50,990 |INFO | status = IN_PROGRESS 
+ 2026-06-18 16:08:51,119 |INFO | END | PUT | /missions/2/start | status=200  
+ 2026-06-18 16:08:56,454 |INFO | START | PUT |/missions/4/start  
+ 2026-06-18 16:08:56,455 |INFO | status = IN_PROGRESS 
+ 2026-06-18 16:08:56,603 |INFO | END | PUT | /missions/4/start | status=200  
+ 2026-06-18 16:09:12,696 |INFO | START | POST |/missions  
+ 2026-06-18 16:09:12,698 |INFO | Calculed risk_level from data 
+ 2026-06-18 16:09:12,698 |INFO | risk is 30  
+ 2026-06-18 16:09:12,699 |INFO | Create mission with risk , data : {'title': 'string', 'description': 'string', 'location': 'string', 'difficulty': 10, 'importance': 10, 'risk_level': 'CRITICAL'} 
+ 2026-06-18 16:09:12,776 |INFO | Mission create succesfully , {'message': "data {'title': 'string', 'description': 'string', 'location': 'string', 'difficulty': 10, 'importance': 10, 'risk_level': 'CRITICAL'} create succesfully", 'MissionId': 10} 
+ 2026-06-18 16:09:12,777 |INFO | END | POST | /missions | status=201  
+ 2026-06-18 16:09:30,470 |INFO | START | PUT |/missions/10/start  
+ 2026-06-18 16:09:30,472 |INFO | status = IN_PROGRESS 
+ 2026-06-18 16:09:30,599 |INFO | END | PUT | /missions/10/start | status=200  
+ 2026-06-18 16:09:59,948 |INFO | START | PUT |/missions/7/start  
+ 2026-06-18 16:09:59,949 |INFO | status = IN_PROGRESS 
+ 2026-06-18 16:10:00,073 |INFO | END | PUT | /missions/7/start | status=200  
+ 2026-06-18 16:11:11,619 |INFO | START | PUT |/missions/7/start  
+ 2026-06-18 16:11:11,620 |INFO | status = IN_PROGRESS 
+ 2026-06-18 16:11:11,681 |ERROR | Failed  
+ 2026-06-18 16:11:11,682 |INFO | END | PUT | /missions/7/start | status=400  
+ 2026-06-18 16:11:21,518 |INFO | START | PUT |/missions/7/start  
+ 2026-06-18 16:11:21,520 |INFO | status = IN_PROGRESS 
+ 2026-06-18 16:11:21,618 |ERROR | Failed  
+ 2026-06-18 16:11:21,619 |INFO | END | PUT | /missions/7/start | status=400  
+ 2026-06-18 16:11:34,163 |INFO | START | PUT |/missions/10/complete  
+ 2026-06-18 16:11:34,347 |INFO | END | PUT | /missions/10/complete | status=400  
+ 2026-06-18 16:11:44,783 |INFO | START | PUT |/missions/2/complete  
+ 2026-06-18 16:11:45,059 |INFO | END | PUT | /missions/2/complete | status=200  
+ 2026-06-18 16:12:13,246 |INFO | START | PUT |/missions/10/assign/10  
+ 2026-06-18 16:12:13,247 |INFO | Try to assign mission , mission id 10 | agent_id 10 
+ 2026-06-18 16:12:13,355 |ERROR | agent id 10 not found 
+ 2026-06-18 16:12:13,356 |INFO | END | PUT | /missions/10/assign/10 | status=404  
+ 2026-06-18 16:12:24,891 |INFO | START | PUT |/missions/10/assign/9  
+ 2026-06-18 16:12:24,893 |INFO | Try to assign mission , mission id 10 | agent_id 9 
+ 2026-06-18 16:12:25,008 |ERROR | Mission is not new 
+ 2026-06-18 16:12:25,009 |INFO | END | PUT | /missions/10/assign/9 | status=400  
