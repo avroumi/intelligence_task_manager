@@ -3,7 +3,7 @@ PROJECT INTELLIGENCE TASK MANAGER :
 
 1/ This project aims to simplify the task and allow the system to define rules for assigning missions to soldiers, using an SQL table that will include statistics, statuses, and rules to manage everything systematically.
 
-The SQL project is divided into two tables in the intelligence_db database:
+The SQL project is divided into two tables in the Intelligence_db database:
     a/ agents
     b/ missions
 We will detail these later, but it is with this data that we will be able to have clear and organized tracking.
@@ -147,4 +147,4 @@ docker run -d --name intelligence-mysql -e MYSQL_ROOT_PASSWORD=1234 \
 
 
   GOOD LUCK !
-  
+
