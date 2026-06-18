@@ -105,5 +105,46 @@ We will detail these later, but it is with this data that we will be able to hav
 docker run -d --name intelligence-mysql -e MYSQL_ROOT_PASSWORD=1234 \
   -e MYSQL_DATABASE=Intelligence_db -p 3306:3306 mysql:8.0
 
-  now active your mysql in docker and you can run it ; Good luck 
+  now active your mysql in docker and you can run it 
 
+
+7/ ENDPOINTS: 
+
+    Agents endpoints : File routes/agent_routes.py:
+
+[POST] /agents : Appointing a new agent
+[GET] /agents : All agents
+[GET] /agents/{id} : agent by ID
+[PUT] /agents/{id} : Update by ID
+[PUT] /agents/{id}/deactivate  : Deactivate agent 
+[GET] /agents/{id}/performance : executing agent performance  
+
+    Missions endpoint : File routes/missions_routes.py : 
+
+[POST] /missions : create mission
+[GET] /missions : get all missions 
+[GET] /missions/{id} : get mission by id 
+[PUT] /missions/{id}/assign/{agent_id} : assign mission agent , 6 conditions
+[PUT] /missions/{id}/start : start the mission
+[PUT] /missions/{id}/complete : end the mission 
+[PUT] /missions/{id}/fail : failed the mission 
+[PUT] /missions/{id}/cancel : cancel the mission 
+
+    Reports endpoints : File routes/report_routes.py : 
+
+[GET] /reports/summary : reports general 
+[GET] /reports/missions-by-status : report by status
+[GET] /reports/top-agent : report top agent
+
+
+8/ THE OVERFLOW : 
+
+    client -> main.py "FASTAPI" -> routers (reports, missions , agents) -> Validation (if not HTTPexecptions) -> database connection -> CRUD datbase -> response 
+
+9/ FINALLY : 
+  You can run the project easely with uvicorn main:app in you terminal .
+  after go to the url localhost:8000/docs and you can use the swagger to run the functions. 
+
+
+  GOOD LUCK !
+  

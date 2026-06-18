@@ -8,17 +8,12 @@ class AgentDB:
     def __init__(self, db : DataBaseConnection):
         self.db = db 
 
-    class CreateAgent(BaseModel): 
-        name : str = Field(min_length=1 , max_length=50)
-        specialty : str = Field(min_length=1 , max_length=100)
-        is_active : bool | None = None 
-        completed_missions : int | None = None 
-        failed_missions : int | None = None 
-        agent_rank : Literal["Junior", "Senior", "Commander"]
+    
+    
+
+    def create_agent(self, data : dict) -> list :
 
         
-
-    def create_agent(self, data : dict) -> dict :
         
         columns = ", ".join(data.keys())
         placeholder = ", ".join(["%s"] * len(data))
@@ -46,7 +41,7 @@ class AgentDB:
     def update_agent(self, agent_id , data : dict) -> dict :
 
          
-        if data["id"] : 
+        if "id" in data : 
             return  "You can't change id"
         
         set_close = ", ".join([f"{key} = %s " for key in data.keys()])
@@ -64,10 +59,12 @@ class AgentDB:
     def deactivate_agent(self, agent_id): 
         with self.db.get_cursor() as cursor : 
             agent_exist = self.get_agent_by_id(agent_id) 
-            if agent_exist:
-                cursor.execute("UPDATE agents SET is_active = false WHERE id = %s ", (agent_id, ))
-                return  f"Deactivate agent {agent_id} successfuly"
-            return "Failed to deactivate agent"
+            if not agent_exist:
+                return "Agent not exits"
+            
+            cursor.execute("UPDATE agents SET is_active = false WHERE id = %s ", (agent_id, ))
+            return  f"Deactivate agent {agent_id} successfuly"
+            
         
     def increment_completed(self, agent_id) -> dict :
         with self.db.get_cursor() as cursor :
@@ -89,16 +86,22 @@ class AgentDB:
         
     def get_agent_performance(self , agent_id): 
         agent = self.get_agent_by_id(agent_id)
-        if agent: 
-            failed = agent["failed_missions"]
-            completed = agent["completed_missions"]
-            total = int(failed) + int(completed)
+        if not agent: 
+            return "agent noot found "
+        
+        failed = agent["failed_missions"]
+        completed = agent["completed_missions"]
+        total = int(failed) + int(completed)
+        if total == 0 :
+            success_rate = 0 
+        else: 
             success_rate = round(completed / total * 100, 2) 
-            return {"completed": completed,
-                    "failed" : failed,
-                    "total" : total, 
-                    "success_rate" : success_rate
-                    }
+
+        return {"completed": completed,
+                "failed" : failed,
+                "total" : total, 
+                "success_rate" : success_rate
+                }
     
     def count_active_agents(self) -> dict :
         with self.db.get_cursor() as cursor :

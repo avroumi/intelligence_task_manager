@@ -27,45 +27,50 @@ class DataBaseConnection:
             database= self.database 
         )
 
-    def create_datbase(self): 
+    def create_database(self): 
 
         conn = self.get_connection_for_database() 
         cursor = conn.cursor()
-        cursor.execute("CREATE DATABASE IF NOT EXISTS Intelligence_db")
-        cursor.execute("USE Intelligence_db")
-
-        cursor.close()
-        conn.close()
+        try: 
+            cursor.execute("CREATE DATABASE IF NOT EXISTS Intelligence_db")
+            cursor.execute("USE Intelligence_db")
+        finally:
+            cursor.close()
+            conn.close()
     
     def create_tables(self):
 
         conn = self.get_connection()
         cursor = conn.cursor()
 
-        cursor.execute("""
-            CREATE TABLE IF NOT EXISTS agents(
-        id INT PRIMARY KEY AUTO_INCREMENT , 
-        name VARCHAR(50) NOT NULL , 
-        specialty VARCHAR(100) NOT NULL , 
-        is_active BOOLEAN DEFAULT TRUE , 
-        completed_missions INT NOT NULL  DEFAULT 0  , 
-        failed_missions INT NOT NULL DEFAULT 0 ,
-        agent_rank ENUM("Junior", "Senior", "Commander") NOT NULL  )
-        """)
-
-        cursor.execute("""
-            CREATE TABLE IF NOT EXISTS missions(
-        id INT PRIMARY  KEY AUTO_INCREMENT , 
-        title VARCHAR(100) NOT NULL , 
-        description TEXT NOT NULL , 
-        location VARCHAR(100) NOT NULL , 
-        difficulty INT NOT NULL CHECK(difficulty BETWEEN 1 AND 10 ), 
-        importance INT NOT NULL CHECK(importance BETWEEN 1 AND 10 ), 
-        status ENUM("NEW", "ASSIGNED", "IN_PROGRESS", "COMPLETED", "FAILED", "CANCELLED") DEFAULT "NEW", 
-        risk_level VARCHAR(50) NOT NULL , 
-        assigned_agent_id INT   
-                       )
+        try : 
+            cursor.execute("""
+                CREATE TABLE IF NOT EXISTS agents(
+            id INT PRIMARY KEY AUTO_INCREMENT , 
+            name VARCHAR(50) NOT NULL , 
+            specialty VARCHAR(100) NOT NULL , 
+            is_active BOOLEAN DEFAULT TRUE , 
+            completed_missions INT NOT NULL  DEFAULT 0  , 
+            failed_missions INT NOT NULL DEFAULT 0 ,
+            agent_rank ENUM("Junior", "Senior", "Commander") NOT NULL  )
             """)
+
+            cursor.execute("""
+                CREATE TABLE IF NOT EXISTS missions(
+            id INT PRIMARY  KEY AUTO_INCREMENT , 
+            title VARCHAR(100) NOT NULL , 
+            description TEXT NOT NULL , 
+            location VARCHAR(100) NOT NULL , 
+            difficulty INT NOT NULL CHECK(difficulty BETWEEN 1 AND 10 ), 
+            importance INT NOT NULL CHECK(importance BETWEEN 1 AND 10 ), 
+            status ENUM("NEW", "ASSIGNED", "IN_PROGRESS", "COMPLETED", "FAILED", "CANCELLED") DEFAULT "NEW", 
+            risk_level VARCHAR(50) NOT NULL , 
+            assigned_agent_id INT   
+                        )
+                """)
+        finally:
+            cursor.close()
+            conn.close()
         
     @contextmanager
     def get_cursor(self, dictionnary= True):
@@ -84,14 +89,13 @@ class DataBaseConnection:
 
 
     def setup(self): 
-        self.create_datbase()
+        self.create_database()
         self.create_tables()
 
 
     
 
 
-db = DataBaseConnection() #AFTER CREATE MAIN DELETE THIS 
-db.setup()
+
 
         

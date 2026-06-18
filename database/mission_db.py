@@ -1,13 +1,13 @@
 from database.db_connection import DataBaseConnection
 from database.agent_db import AgentDB
 
-db = DataBaseConnection() #AFTER CREATE MAIN DELETE THIS 
-agent_db = AgentDB(db)
+
 
 
 class MissionDB : 
-    def __init__(self, db : DataBaseConnection):
+    def __init__(self, db : DataBaseConnection, agent_db : AgentDB):
         self.db = db 
+        self.agent_db = agent_db
 
     def create_mission_(self, data : dict) -> dict :
 
@@ -50,7 +50,12 @@ class MissionDB :
     def assign_mission(self, mission_id : int , agent_id : int ) -> str : 
 
         exists_mission = self.get_missions_by_id(mission_id)
-        exists_agent = agent_db.get_agent_by_id(agent_id)
+        exists_agent = self.agent_db.get_agent_by_id(agent_id)
+
+        if not exists_agent:
+            return "Agent not exists"
+        if not exists_mission:
+            return "Mission not exists"
 
         if exists_mission["status"] != "NEW" : 
             return "This mission already assigned"
@@ -62,9 +67,9 @@ class MissionDB :
             if exists_agent["agent_rank"] != "Commander": 
                 return " The mission is too much dangerous for this agent"
             
-        # assigned_mission = self.get_open_missions_by_agent(agent_id) #WANT TO FIX IT THIS FUNCTIONS
-        # if len(assigned_mission) >= 3 : 
-        #     return  "The agent have already three mission"
+        assigned_mission = self.get_open_missions_by_agent(agent_id) 
+        if len(assigned_mission) >= 3 : 
+            return  "The agent have already three mission"
         
         if exists_mission and exists_agent : 
             with self.db.get_cursor() as cursor :
@@ -84,7 +89,7 @@ class MissionDB :
         if mission["status"] == "ASSIGNED" and status !=  "IN_PROGRESS": 
             return "Status is ASSIGNED you can just to choice IN_PROGRESS"
         
-        if mission["status"] == "IN_PROGRESS" and status !=  "FAILED" or  mission["status"] == "IN_PROGRESS" and status != "COMPLETED": 
+        if mission["status"] == "IN_PROGRESS" and status not in ["FAILED", "COMPLETED"]: 
             return "Status is IN_PROGRESS you can just to choice failed or completed"
        
         with self.db.get_cursor() as cursor :
@@ -94,7 +99,7 @@ class MissionDB :
     def get_open_missions_by_agent(self, agent_id) -> list[dict] | None:
         with self.db.get_cursor() as cursor :
             cursor.execute("SELECT * FROM missions " \
-            " WHERE status ='IN_PROGRESS' OR status ='ASSIGNED' AND id = %s ) " ,(agent_id, ))
+            " WHERE (status ='IN_PROGRESS' OR status ='ASSIGNED') AND id = %s  " ,(agent_id, ))
             return cursor.fetchall()
         
 
@@ -113,7 +118,7 @@ class MissionDB :
 
     def count_critical_missions(self): 
          with self.db.get_cursor() as cursor :
-            cursor.execute("SELECT COUNT(*) FROM missions WHERE status = CRITICAL")
+            cursor.execute("SELECT COUNT(*) FROM missions WHERE risk_level = 'CRITICAL' ")
             mission = cursor.fetchone()
             return {"total_CRITICAL_mission" : mission["COUNT(*)"]}
          
@@ -125,14 +130,14 @@ class MissionDB :
     def count_open_missions(self):
         with self.db.get_cursor() as cursor :
             cursor.execute("SELECT status , COUNT(status) AS active FROM missions " \
-            "WHERE status IN ('IN_PROGRESS','NEW','ASSIGNED')" \
-            "GROUP BY status")
+            " WHERE status IN ('IN_PROGRESS','NEW','ASSIGNED')" \
+            " GROUP BY status")
             return cursor.fetchall()
 
     def delete_mission(self, mission_id) -> str : 
         with self.db.get_cursor() as cursor :
             mission = self.get_missions_by_id(mission_id)
-            if mission["status"] != "NEW" or mission["status"] != "ASSIGNED":
+            if mission["status"] not in ["NEW","ASSIGNED"] :
                 return 'You can delete this mission'
             
             cursor.execute("DELETE FROM  missions WHERE id = %s ", (mission_id, ))
