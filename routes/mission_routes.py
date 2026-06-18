@@ -107,7 +107,7 @@ def start_mission(mission_id : int ):
         raise HTTPException(404, result)
     
     if result != "Status updated successfully" : 
-        logger.error("Failed ")
+        logger.error(f"Failed {result}")
         raise HTTPException(400, result )
     
     return {"message": result}
@@ -116,14 +116,17 @@ def start_mission(mission_id : int ):
 @router_mission.put("/{mission_id}/complete")
 def complete_mission(mission_id : int ):
     status = "COMPLETED"
+    logger.info("status = COMPLETED")
     mission_test = mission_db.get_missions_by_id(mission_id)
     result = mission_db.update_mission_status(mission_id, status)
 
     if not  mission_test["assigned_agent_id"]: 
+            logger.error("Mission %s not have agent", mission_id)
             raise HTTPException(400 , "you can't completed mission if" \
             " you not assigned agent , choose cancel ")
 
-    if result == "mission not found": 
+    if result == "mission not found":
+        logger.error("Mission %s not found ", mission_id) 
         raise HTTPException(404, result)
     
     if result != "Status updated successfully" : 
@@ -139,35 +142,42 @@ def complete_mission(mission_id : int ):
 @router_mission.put("/{mission_id}/fail")
 def failed_mission(mission_id : int ):
     status = "FAILED"
+    logger.info("status = FAILED")
 
     mission_test = mission_db.get_missions_by_id(mission_id)
 
-    if not  mission_test["assigned_agent_id"]: 
+    if not  mission_test["assigned_agent_id"]:
+            logger.error("Mission %s not have agent", mission_id) 
             raise HTTPException(400 , "you can't completed mission if" \
             "you not assigned agent , choose cancel ")
 
     result = mission_db.update_mission_status(mission_id, status)
     if result == "mission not found": 
+        logger.error("mission id %s not found", mission_id)
         raise HTTPException(404, result)
     
     if result != "Status updated successfully" : 
+        logger.error(f"Failed {result}")
         raise HTTPException(400, result )
     else : 
         mission = mission_db.get_missions_by_id(mission_id)
         agent = mission["assigned_agent_id"]
     
         failed = agent_db.increment_failed(agent)
-    
+    logger.info("Success , %s", failed)
     return {"message": result, "failed": failed}
     
    
 @router_mission.put("/{mission_id}/cancel")
 def cancelled_mission(mission_id : int):
     status = "CANCELLED"
+    logger.info("status = CANCELLED")
     result = mission_db.update_mission_status(mission_id, status)
     if result == "mission not found": 
+        logger.error("mission id %s not found", mission_id)
         raise HTTPException(404, result)
     if result != "Status updated successfully" : 
+        logger.error(f"Failed , {result}")
         raise HTTPException(400, result )
     
     return {"message": result}
