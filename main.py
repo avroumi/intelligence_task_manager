@@ -2,8 +2,8 @@ from database.db_connection import DataBaseConnection
 from database.agent_db import AgentDB
 from database.mission_db import MissionDB
 
-from routes.agent_routes import create_router_agent
-
+from routes.agent_routes import router_agent
+from routes.mission_routes import router_mission
 
 from fastapi import FastAPI
 from contextlib import asynccontextmanager
@@ -25,7 +25,8 @@ async def lifespan(app : FastAPI):
 app = FastAPI(title="Intelligence Task Manager", lifespan=lifespan)
 
 
-app.include_router(create_router_agent(agent_db))
+app.include_router(router_agent)
+app.include_router(router_mission)
 
 
 

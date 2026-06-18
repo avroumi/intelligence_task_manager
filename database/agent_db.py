@@ -7,13 +7,9 @@ from typing import Literal
 class AgentDB:
     def __init__(self, db : DataBaseConnection):
         self.db = db 
-
-    
     
 
-    def create_agent(self, data : dict) -> list :
-
-        
+    def create_agent(self, data : dict) -> list :  
         
         columns = ", ".join(data.keys())
         placeholder = ", ".join(["%s"] * len(data))
@@ -40,9 +36,6 @@ class AgentDB:
         
     def update_agent(self, agent_id , data : dict) -> dict :
 
-         
-        if "id" in data : 
-            return  "You can't change id"
         
         set_close = ", ".join([f"{key} = %s " for key in data.keys()])
         values = list(data.values()) + [agent_id]
@@ -51,44 +44,36 @@ class AgentDB:
         with self.db.get_cursor() as cursor : 
             cursor.execute(sql, values)
             success = cursor.rowcount > 0 
-            if success : 
-                return {"message" : " Update succesfully"}
-            
-        return  "Update failed"
+        
+        return success
     
     def deactivate_agent(self, agent_id): 
         with self.db.get_cursor() as cursor : 
-            agent_exist = self.get_agent_by_id(agent_id) 
-            if not agent_exist:
-                return "Agent not exits"
-            
+
             cursor.execute("UPDATE agents SET is_active = false WHERE id = %s ", (agent_id, ))
             return  f"Deactivate agent {agent_id} successfuly"
             
         
     def increment_completed(self, agent_id) -> dict :
         with self.db.get_cursor() as cursor :
-            agent_exist = self.get_agent_by_id(agent_id) 
-            if agent_exist:
-                cursor.execute("UPDATE agents SET completed_missions = completed_missions + 1 " \
-                "WHERE id = %s", (agent_id, ))
-                return  "Increment succesfully"
-            return "Failed to increment"
+            
+            cursor.execute("UPDATE agents SET completed_missions = completed_missions + 1 " \
+            "WHERE id = %s", (agent_id, ))
+        return  f"Increment succesfully completed mission : {agent_id}"
+            
         
     def increment_failed(self, agent_id) -> dict :
         with self.db.get_cursor() as cursor :
-            agent_exist = self.get_agent_by_id(agent_id) 
-            if agent_exist:
-                cursor.execute("UPDATE agents SET failed_missions = failed_missions + 1 " \
-                "WHERE id = %s", (agent_id, ))
-                return  "Increment succesfully"
-            return  "Failed to increment agent"
+            
+            cursor.execute("UPDATE agents SET failed_missions = failed_missions + 1 " \
+            "WHERE id = %s", (agent_id, ))
+            return  f"Increment succesfully failed : agent {agent_id} "
+        
         
     def get_agent_performance(self , agent_id): 
         agent = self.get_agent_by_id(agent_id)
         if not agent: 
-            return "agent noot found "
-        
+            return "agent not found"
         failed = agent["failed_missions"]
         completed = agent["completed_missions"]
         total = int(failed) + int(completed)

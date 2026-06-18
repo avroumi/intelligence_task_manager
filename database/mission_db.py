@@ -9,20 +9,7 @@ class MissionDB :
         self.db = db 
         self.agent_db = agent_db
 
-    def create_mission_(self, data : dict) -> dict :
-
-        risk = int(data["difficulty"]) * 2 + int(data["importance"])
-        print(risk)
-        
-        if risk > 0 and risk <= 9 : 
-            data["risk_level"] = "LOW"
-        elif risk >= 10 and  risk <= 17:
-            data["risk_level"] = "MEDIUM"
-        elif risk >= 18 and  risk <= 24:
-            data["risk_level"] = "HIGH"
-        else: 
-            data["risk_level"] = "CRITICAL"
-        
+    def create_mission(self, data : dict) -> dict :
         
         columns = ", ".join(data.keys())
         placeholder = ", ".join(["%s"] * len(data))
@@ -48,49 +35,27 @@ class MissionDB :
             return cursor.fetchone()
         
     def assign_mission(self, mission_id : int , agent_id : int ) -> str : 
-
-        exists_mission = self.get_missions_by_id(mission_id)
-        exists_agent = self.agent_db.get_agent_by_id(agent_id)
-
-        if not exists_agent:
-            return "Agent not exists"
-        if not exists_mission:
-            return "Mission not exists"
-
-        if exists_mission["status"] != "NEW" : 
-            return "This mission already assigned"
-
-        if exists_agent["is_active"] == False : 
-            return f"This soldat {agent_id} is inactive "
+         
+        with self.db.get_cursor() as cursor :
+            cursor.execute("UPDATE  missions SET  status = 'ASSIGNED' , assigned_agent_id" \
+            "  =  %s WHERE id = %s ",(agent_id,mission_id))
+        return cursor.rowcount > 0 
         
-        if exists_mission["risk_level"] == "CRITICAL" : 
-            if exists_agent["agent_rank"] != "Commander": 
-                return " The mission is too much dangerous for this agent"
             
-        assigned_mission = self.get_open_missions_by_agent(agent_id) 
-        if len(assigned_mission) >= 3 : 
-            return  "The agent have already three mission"
-        
-        if exists_mission and exists_agent : 
-            with self.db.get_cursor() as cursor :
-                cursor.execute("UPDATE  missions SET  status = 'ASSIGNED' , assigned_agent_id" \
-                "  =  %s WHERE id = %s ",(agent_id,mission_id))
-                
-                return "assigned Succesfully"
-        return "Failed to assign"
-    
     def update_mission_status(self, mission_id : int , status : str) -> str: 
         mission = self.get_missions_by_id(mission_id)
+        if not mission:
+            return "mission not found"
         status = status.upper()
-        
-
-        
         
         if mission["status"] == "ASSIGNED" and status !=  "IN_PROGRESS": 
             return "Status is ASSIGNED you can just to choice IN_PROGRESS"
         
         if mission["status"] == "IN_PROGRESS" and status not in ["FAILED", "COMPLETED"]: 
             return "Status is IN_PROGRESS you can just to choice failed or completed"
+        
+        if status == "CANCELLED" and  mission["status"] not in ["NEW","ASSIGNED"]:
+                return f'You can delete this mission becasue status is {mission["status"]}'
        
         with self.db.get_cursor() as cursor :
             cursor.execute("UPDATE missions SET status = %s WHERE id = %s ", (status, mission_id))
@@ -134,14 +99,6 @@ class MissionDB :
             " GROUP BY status")
             return cursor.fetchall()
 
-    def delete_mission(self, mission_id) -> str : 
-        with self.db.get_cursor() as cursor :
-            mission = self.get_missions_by_id(mission_id)
-            if mission["status"] not in ["NEW","ASSIGNED"] :
-                return 'You can delete this mission'
-            
-            cursor.execute("DELETE FROM  missions WHERE id = %s ", (mission_id, ))
-            return "Mission delete succesfully"
 
 
         
